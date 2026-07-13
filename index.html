@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>江頭 SKYWALKER OFFICIAL HOMEPAGE</title>
 
+
 <style>
 html {
   background: #dcdcdc;
 }
 
 body {
+  background: #dcdcdc;
+  color: #111111;
+  font-family: "MS PGothic", "Osaka", "Hiragino Kaku Gothic ProN", sans-serif;
   max-width: 920px;
   margin: 0 auto;
   padding: 14px;
   box-sizing: border-box;
-  background: #dcdcdc;
-  color: #111;
-  font-family: "MS PGothic", Osaka, "Hiragino Kaku Gothic ProN", sans-serif;
-  font-size: 15px;
 }
 
 a {
@@ -32,11 +32,20 @@ a:visited {
 }
 
 .site-title {
-  margin: 8px 0 10px;
   text-align: center;
+  margin: 8px 0 2px;
   font-family: "MS Mincho", "Hiragino Mincho ProN", serif;
   font-size: 28px;
   font-weight: normal;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 10px;
 }
 
 .layout {
@@ -44,44 +53,44 @@ a:visited {
   grid-template-columns: 190px 1fr;
   gap: 18px;
   align-items: start;
+  background: #f5f5f5;
+  border: 2px outset #ffffff;
   padding: 12px;
-  background: #f4f4f4;
-  border: 2px outset #fff;
 }
 
 .menu {
-  padding: 8px;
   background: #e8e8e8;
-  border: 2px inset #fff;
+  border: 2px inset #ffffff;
+  padding: 8px;
 }
 
 .menu img {
   display: block;
   width: 170px;
   height: auto;
+  border: 1px solid #666666;
   margin: 0 auto;
-  border: 1px solid #666;
 }
 
-.menu-title {
-  margin-top: 10px;
-  padding: 3px;
+.menu b {
+  display: block;
   text-align: center;
-  font-weight: bold;
   background: #c0c0c0;
-  border: 2px outset #fff;
+  border: 2px outset #ffffff;
+  padding: 3px;
+  margin-top: 10px;
 }
 
 .menu ul {
   padding-left: 24px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 .content {
   min-height: 480px;
+  background: #ffffff;
+  border: 2px inset #ffffff;
   padding: 14px 18px;
-  background: #fff;
-  border: 2px inset #fff;
 }
 
 .section {
@@ -93,32 +102,44 @@ a:visited {
 }
 
 h3 {
-  margin-top: 0;
-  padding-bottom: 4px;
   font-family: "MS Mincho", "Hiragino Mincho ProN", serif;
   font-size: 20px;
   font-weight: normal;
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted #777777;
+  padding-bottom: 4px;
+  margin-top: 0;
+}
+
+.notice {
+  background: #fffbe6;
+  border: 1px dashed #777777;
+  padding: 8px;
+  margin: 10px 0 16px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.small-note {
+  font-size: 11px;
+  color: #666666;
+  text-align: right;
 }
 
 hr {
   margin: 18px 0;
   border: 0;
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  background: #ffffff;
 }
 
-th,
-td {
-  padding: 7px 9px;
-  border: 1px solid #666;
+td, th {
+  border: 1px solid #666666;
+  padding: 6px 10px;
   text-align: left;
-  vertical-align: top;
 }
 
 th {
@@ -126,10 +147,17 @@ th {
 }
 
 .footer {
-  margin-top: 22px;
   text-align: center;
-  color: #444;
+  margin-top: 22px;
   font-size: 12px;
+  color: #444444;
+}
+
+.surreal-line {
+  text-align: center;
+  font-size: 12px;
+  color: #555555;
+  margin: 12px 0;
 }
 
 @media (max-width: 700px) {
@@ -155,47 +183,33 @@ th {
     gap: 6px 16px;
     padding-left: 20px;
   }
-
-  .content {
-    min-height: auto;
-  }
-
-  table {
-    font-size: 13px;
-  }
 }
 </style>
+
 
 <script>
 function showPage(id) {
   document.querySelectorAll(".section").forEach(function(section) {
     section.classList.remove("active");
   });
-
   const target = document.getElementById(id);
-  if (target) {
-    target.classList.add("active");
-  }
+  if (target) target.classList.add("active");
 }
-
 window.addEventListener("DOMContentLoaded", function() {
   showPage("profile");
 });
 </script>
 </head>
-
 <body>
 
 <h2 class="site-title">江頭 SKYWALKER OFFICIAL HOMEPAGE</h2>
 <hr>
 
 <div class="layout">
-
   <aside class="menu">
     <img src="profile.jpg" alt="プロフィール写真">
-
-    <div class="menu-title">MENU</div>
-
+    <br>
+    <b>MENU</b>
     <ul>
       <li><a onclick="showPage('profile')">Profile</a></li>
       <li><a onclick="showPage('works')">Works</a></li>
@@ -205,124 +219,88 @@ window.addEventListener("DOMContentLoaded", function() {
   </aside>
 
   <main class="content">
-
     <section id="profile" class="section">
       <h3>Profile</h3>
-
+      
       <p>Recording Engineer / Mix Engineer / Composer</p>
-
-      <p>
-        アーティスト・アイドルを中心に、<br>
-        作編曲 / Recording / Mix / Masteringを行っています。
-      </p>
-
+      <p>アーティスト・アイドルを中心に、<br>作編曲 / Recording / Mix / Masteringを行っています。</p>
       <hr>
-
-      <p>Last Update : 2026/07/14</p>
+      <p>Last Update : 2026/07/14</p><p class="small-note">推奨環境：横幅800px以上 / 気持ちに余裕のある方</p>
     </section>
 
-    <section id="works" class="section">
-      <h3>Works</h3>
+    
+<section id="works" class="section">
+<h3>Works</h3>
 
-      <p>これまでに担当した作品です。</p>
+<p>これまでに担当した作品です。</p>
 
-      <!--
-        実績を追加するときは、下の <tr> ～ </tr> をコピーして、
-        年・アーティスト名・曲名・担当内容を書き換えてください。
-      -->
+<!--
+実績を追加するときは、下の <tr>...</tr> をコピーして書き換えてください。
+-->
 
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Artist</th>
-            <th>Title</th>
-            <th>Credit</th>
-          </tr>
-        </thead>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Artist</th>
+<th>Album</th>
+<th>Title</th>
+<th>Credit</th>
+</tr>
+</thead>
 
-        <tbody>
-          <tr>
-            <td>2025</td>
-            <td>NANIMONO</td>
-            <td>M2『未確認生物』</td>
-            <td>Mix,Mas</td>
-          </tr>
+<tbody>
 
-          <tr>
-            <td>2026</td>
-            <td>Artist Name</td>
-            <td>Song Title</td>
-            <td>Recording / Mix</td>
-          </tr>
+<tr>
+<td>2026</td>
+<td>Artist Name</td>
+<td>Album Name</td>
+<td>Song Title</td>
+<td>Mix</td>
+</tr>
 
-          <tr>
-            <td>2025</td>
-            <td>Artist Name</td>
-            <td>Song Title</td>
-            <td>Mastering</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+<tr>
+<td>2026</td>
+<td>Artist Name</td>
+<td>Album Name</td>
+<td>Song Title</td>
+<td>Recording / Mix</td>
+</tr>
+
+</tbody>
+</table>
+
+</section>
+
 
     <section id="price" class="section">
       <h3>Price</h3>
-
       <table>
-        <tr>
-          <th>Menu</th>
-          <th>Price（税込）</th>
-        </tr>
-        <tr>
-          <td>Mix</td>
-          <td>22,000円</td>
-        </tr>
-        <tr>
-          <td>Mastering</td>
-          <td>22,000円</td>
-        </tr>
-        <tr>
-          <td>Vocal Edit</td>
-          <td>22,000円</td>
-        </tr>
-        <tr>
-          <td>Lyrics</td>
-          <td>22,000円</td>
-        </tr>
-        <tr>
-          <td>Compose</td>
-          <td>148,500円</td>
-        </tr>
+        <tr><th>Menu</th><th>Price（税込）</th></tr>
+        <tr><td>Mix</td><td>22,000円</td></tr>
+        <tr><td>Mastering</td><td>22,000円</td></tr>
+        <tr><td>Vocal Edit</td><td>22,000円</td></tr>
+        <tr><td>Lyrics</td><td>22,000円</td></tr>
+        <tr><td>Compose</td><td>148,500円</td></tr>
       </table>
-
       <p>※料金は内容により変動する場合があります。</p>
     </section>
 
     <section id="contact" class="section">
       <h3>Contact</h3>
-
       <p>ご依頼・ご相談はお気軽にお問い合わせください。</p>
-
-      <p>
-        Mail<br>
-        <a href="mailto:jerkstudiojp@gmail.com">jerkstudiojp@gmail.com</a>
-      </p>
-
-      <p>
-        X（Twitter）<br>
-        <a href="https://x.com/JERKSTUDIO" target="_blank" rel="noopener noreferrer">
-          https://x.com/JERKSTUDIO
-        </a>
+      <p>Mail<br><a href="mailto:jerkstudiojp@gmail.com">jerkstudiojp@gmail.com</a></p>
+      <p>X（Twitter）<br>
+        <a href="https://x.com/JERKSTUDIO" target="_blank" rel="noopener noreferrer">https://x.com/JERKSTUDIO</a>
       </p>
     </section>
 
     <hr>
 
     <footer class="footer">
-      <p>Copyright © 2026 JERKSTUDIO All Rights Reserved.</p>
+      <p>Last Update : 2026/07/14</p>
+<p>Copyright © 2026 JERKSTUDIO All Rights Reserved.</p>
     </footer>
-
   </main>
 </div>
 
