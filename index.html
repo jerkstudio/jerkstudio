@@ -4,33 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>江頭 SKYWALKER OFFICIAL HOMEPAGE</title>
+
+
 <style>
-html { background:#fff; }
-body {
-  background:#fff; color:#000;
-  font-family:"Times New Roman","Yu Mincho","Hiragino Mincho ProN",serif;
-  max-width:900px; margin:0 auto; padding:12px; box-sizing:border-box;
+html {
+  background: #dcdcdc;
 }
-a { color:#0000ee; text-decoration:underline; cursor:pointer; }
-a:visited { color:#551a8b; }
-.site-title { text-align:center; margin:10px 0; }
-.layout { display:grid; grid-template-columns:180px 1fr; gap:40px; align-items:start; }
-.menu img { display:block; width:170px; height:auto; }
-.menu ul { padding-left:22px; }
-.section { display:none; }
-.section.active { display:block; }
-hr { margin:20px 0; border:0; border-top:1px solid #777; }
-table { border-collapse:collapse; }
-td,th { border:1px solid #000; padding:6px 10px; text-align:left; }
-.footer { text-align:center; margin-top:28px; }
-.counter { font-family:"Courier New",monospace; font-weight:bold; letter-spacing:2px; }
-@media (max-width:700px) {
-  .layout { display:block; }
-  .menu { margin-bottom:24px; }
-  .menu img { width:min(170px,45vw); }
-  .menu ul { display:flex; flex-wrap:wrap; gap:8px 18px; padding-left:20px; }
+
+body {
+  background: #dcdcdc;
+  color: #111111;
+  font-family: "MS PGothic", "Osaka", "Hiragino Kaku Gothic ProN", sans-serif;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #0000cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #800080;
+}
+
+.site-title {
+  text-align: center;
+  margin: 8px 0 2px;
+  font-family: "MS Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px;
+  align-items: start;
+  background: #f5f5f5;
+  border: 2px outset #ffffff;
+  padding: 12px;
+}
+
+.menu {
+  background: #e8e8e8;
+  border: 2px inset #ffffff;
+  padding: 8px;
+}
+
+.menu img {
+  display: block;
+  width: 170px;
+  height: auto;
+  border: 1px solid #666666;
+  margin: 0 auto;
+}
+
+.menu b {
+  display: block;
+  text-align: center;
+  background: #c0c0c0;
+  border: 2px outset #ffffff;
+  padding: 3px;
+  margin-top: 10px;
+}
+
+.menu ul {
+  padding-left: 24px;
+  line-height: 1.8;
+}
+
+.content {
+  min-height: 480px;
+  background: #ffffff;
+  border: 2px inset #ffffff;
+  padding: 14px 18px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+h3 {
+  font-family: "MS Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 1px dotted #777777;
+  padding-bottom: 4px;
+  margin-top: 0;
+}
+
+.notice {
+  background: #fffbe6;
+  border: 1px dashed #777777;
+  padding: 8px;
+  margin: 10px 0 16px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.small-note {
+  font-size: 11px;
+  color: #666666;
+  text-align: right;
+}
+
+hr {
+  margin: 18px 0;
+  border: 0;
+  border-top: 1px solid #999999;
+}
+
+table {
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+td, th {
+  border: 1px solid #666666;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th {
+  background: #e6e6e6;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 12px;
+  color: #444444;
+}
+
+.surreal-line {
+  text-align: center;
+  font-size: 12px;
+  color: #555555;
+  margin: 12px 0;
+}
+
+@media (max-width: 700px) {
+  .site-title {
+    font-size: 22px;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  .menu {
+    margin-bottom: 14px;
+  }
+
+  .menu img {
+    width: min(170px, 55vw);
+  }
+
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding-left: 20px;
+  }
 }
 </style>
+
+
 <script>
 function showPage(id) {
   document.querySelectorAll(".section").forEach(function(section) {
@@ -65,10 +221,11 @@ window.addEventListener("DOMContentLoaded", function() {
   <main class="content">
     <section id="profile" class="section">
       <h3>Profile</h3>
+      
       <p>Recording Engineer / Mix Engineer / Composer</p>
       <p>アーティスト・アイドルを中心に、<br>作編曲 / Recording / Mix / Masteringを行っています。</p>
       <hr>
-      <p>Last Update : 2026/07/14</p>
+      <p>Last Update : 2026/07/14</p><p class="small-note">推奨環境：横幅800px以上 / 気持ちに余裕のある方</p>
     </section>
 
     <section id="works" class="section">
