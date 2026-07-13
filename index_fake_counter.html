@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>江頭 SKYWALKER OFFICIAL HOMEPAGE</title>
+
+<style>
+
+body{
+    background:#fff;
+    color:#000;
+    font-family:"Times New Roman",serif;
+    width:900px;
+    margin:auto;
+}
+
+a{
+    color:blue;
+    cursor:pointer;
+}
+
+.menu{
+    width:180px;
+    float:left;
+}
+
+.content{
+    margin-left:220px;
+}
+
+.section{
+    display:none;
+}
+
+.section.active{
+    display:block;
+}
+
+hr{
+    margin:20px 0;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid #000;
+    padding:6px;
+}
+
+</style>
+
+<script>
+
+function showPage(id){
+
+const pages=document.querySelectorAll(".section");
+
+pages.forEach(function(page){
+page.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+window.onload=function(){
+showPage("profile");
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+
+<h2>江頭 SKYWALKER OFFICIAL HOMEPAGE</h2>
+
+<hr>
+
+</center>
+
+<div class="menu">
+
+<img src="images/profile.jpg" width="170" alt="プロフィール写真">
+
+<br><br>
+
+<b>MENU</b>
+
+<ul>
+
+<li><a onclick="showPage('profile')">Profile</a></li>
+
+<li><a onclick="showPage('works')">Works</a></li>
+
+<li><a onclick="showPage('price')">Price</a></li>
+
+
+
+<li><a onclick="showPage('contact')">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<div id="profile" class="section">
+
+<h3>Profile</h3>
+
+<p>
+
+Recoding Engineer / Mix Engineer / Composer
+
+</p>
+
+<p>
+
+アーティスト・アイドルを中心に
+
+作編曲/Recording/Mix/Masteringを行っています。
+
+</p>
+
+<p>
+
+
+
+</p>
+
+<hr>
+
+Last Update : 2026/07/14
+
+</div>
+
+
+<div id="works" class="section">
+
+<h3>Works</h3>
+
+<p>
+これまでに担当した作品です。
+</p>
+
+<ul>
+<li>2026　Artist Name / Mix</li>
+<li>2026　Artist Name / Mastering</li>
+<li>2025　Artist Name / Vocal Edit</li>
+<li>2025　Artist Name / Compose</li>
+</ul>
+
+<p>
+YouTube・Spotifyなどのリンクもここに掲載できます。
+</p>
+
+</div>
+
+<div id="price" class="section">
+
+<h3>Price</h3>
+
+<table>
+
+<tr>
+<th>Menu</th>
+<th>Price(税込)</th>
+</tr>
+
+<tr>
+<td>Mix</td>
+<td>22,000円</td>
+</tr>
+
+<tr>
+<td>Mastering</td>
+<td>22,000円</td>
+</tr>
+
+<tr>
+<td>Vocal Edit</td>
+<td>22,000円</td>
+</tr>
+
+<tr>
+<td>Lyrics</td>
+<td>22,000円</td>
+</tr>
+
+<tr>
+<td>Compose</td>
+<td>148,500円</td>
+</tr>
+
+</table>
+
+<p>
+※料金は内容により変動する場合があります。
+</p>
+
+
+
+
+
+</div>
+
+<div id="contact" class="section">
+
+<h3>Contact</h3>
+
+<p>
+ご依頼・ご相談はお気軽にお問い合わせください。
+</p>
+
+<p>
+
+Mail<br>
+info@jerkstudio@gmail.com
+
+</p>
+
+<p>
+
+X（Twitter）<br>
+<a href="https://x.com/JERKSTUDIO" target="_blank">
+https://x.com/JERKSTUDIO
+</a>
+</p>
+
+
+</p>
+
+<p>
+
+
+
+</p>
+
+<p>
+
+
+
+</p>
+
+</div>
+
+<hr>
+
+<center>
+
+<p>Last Update : 2026/07/14</p>
+
+
+<p>
+あなたは <span id="counter">135820</span> 人目の訪問者です。
+</p>
+
+<script>
+const KEY="jerk_fake_counter";
+let n=localStorage.getItem(KEY);
+if(!n){
+  n=135820;
+}else{
+  n=parseInt(n,10)+1;
+}
+localStorage.setItem(KEY,n);
+document.getElementById("counter").textContent=n;
+</script>
+
+<p>
+
+Copyright © 2026 JERKSTUDIO All Rights Reserved.
+
+</p>
+
+</center>
+
+</div>
+
+</body>
+</html>
